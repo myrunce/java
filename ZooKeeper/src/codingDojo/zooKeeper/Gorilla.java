@@ -1,0 +1,20 @@
+package codingDojo.zooKeeper;
+
+public class Gorilla extends Mammal {
+	public void throwSomething() {
+		this.energyLevel = energyLevel - 5;
+		System.out.println("You threw something you stupid little monkey! You lost 5 health for your antics.");
+	}
+	
+	public void eatBananas() {
+		this.energyLevel = energyLevel + 10;
+		System.out.println("YoU aTe bAnAnAs Oo Oo! aH aH! HeAlTh Up By 10!");
+	}
+	
+	public void climb() {
+		this.energyLevel = energyLevel - 10;
+		System.out.println("You're climbing like the gorilla you are! Health down by 10");
+	}
+	
+}
+

@@ -1,0 +1,5 @@
+package com.myron.UpForIt.repositories;
+
+public class ChallengeRepo {
+
+}

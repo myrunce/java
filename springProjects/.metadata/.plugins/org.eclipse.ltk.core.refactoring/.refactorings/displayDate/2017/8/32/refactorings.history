@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;displayDate/src/main/webapp/WEB-INF/date.jsp&apos; to &apos;dateView.jsp&apos;" description="Rename resource &apos;date.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/date.jsp" name="dateView.jsp" stamp="1502220426682" updateReferences="true"/>
+</session>

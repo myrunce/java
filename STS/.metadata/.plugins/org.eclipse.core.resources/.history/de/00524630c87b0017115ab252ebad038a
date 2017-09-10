@@ -1,0 +1,44 @@
+package com.teams.models;
+import com.teams.models.Player;
+import java.util.ArrayList;
+
+public class Team {
+	private String name;
+	private int teamSize = 0;
+	private ArrayList<Player> players;
+	
+	public Team() {
+	}
+	
+	public Team(String name) {
+		this.name = name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void addPlayer(Player player) {
+		System.out.println(player);
+		this.players.add(player);
+		System.out.println("added player");
+		this.teamSize++;
+	}
+	
+	public void deletePlayer(int x) {
+		this.players.remove(x);
+		this.teamSize--;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getTeamSize() {
+		return this.teamSize;
+	}
+	public ArrayList<Player> getPlayers(){
+		return this.players;
+	}
+	
+}

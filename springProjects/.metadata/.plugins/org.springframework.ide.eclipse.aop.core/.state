@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="firstproject"/>
+<aop-project name="DojoSurvey"/>
+<aop-project name="portfolio"/>
+<aop-project name="EmployeesManagers"/>
+<aop-project name="ninjaGold"/>
+<aop-project name="Auth"/>
+<aop-project name="counter"/>
+<aop-project name="controllerspractice"/>
+<aop-project name="displayDate"/>
+<aop-project name="ProductsAndCategories"/>
+<aop-project name="Countries"/>
+<aop-project name="DojosAndNinjas"/>
+<aop-project name="Drivers"/>
+<aop-project name="helloHuman"/>
+<aop-project name="Books"/>
+<aop-project name="ProductCatalog"/>
+<aop-project name="DojoOverflow"/>
+<aop-project name="ForTran"/>
+<aop-project name="Relationships"/>
+<aop-project name="strings"/>
+<aop-project name="TheCode"/>
+<aop-project name="Languages"/>
+<aop-project name="Lookify"/>
+</aop-reference-model>

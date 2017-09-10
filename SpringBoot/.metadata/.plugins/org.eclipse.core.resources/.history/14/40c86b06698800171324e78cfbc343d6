@@ -1,0 +1,142 @@
+package com.myron.UpForItApi.controllers;
+
+import java.security.Principal;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.myron.UpForItApi.models.ChallengesToBeAdded;
+import com.myron.UpForItApi.models.Role;
+import com.myron.UpForItApi.models.User;
+import com.myron.UpForItApi.services.ChallengeService;
+import com.myron.UpForItApi.services.ChallengesTBAService;
+import com.myron.UpForItApi.services.UserService;
+import com.myron.UpForItApi.validator.UserValidator;
+
+@Controller
+public class UpForItApiController {
+	private UserService userService;
+    private UserValidator userValidator;
+    private ChallengeService challengeService;
+    private ChallengesTBAService challengesTBAService;
+     
+    @Autowired
+    public UpForItApiController(UserService userService, UserValidator userValidator, ChallengeService challengeService, ChallengesTBAService challengesTBAService) {
+        this.userService = userService;
+        this.userValidator = userValidator;
+        this.challengeService = challengeService;
+        this.challengesTBAService = challengesTBAService;
+    }
+    
+//    public Users() {
+//    	
+//    }
+
+	public UpForItApiController(UserService userService) {
+		this.userService = userService;
+	}
+
+//	@RequestMapping("/registration")
+//	public String registerForm(@Valid @ModelAttribute("user") User user) {
+//		return "registrationPage.jsp";
+//	}
+
+	@PostMapping("/registration")
+    public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model) {
+        // NEW
+        userValidator.validate(user, result);
+        if (result.hasErrors()) {
+            return "loginPage.jsp";
+        }
+        List<User> users = userService.findAll();
+        System.out.println(users.size());
+        if (users.size() == 0) {
+        	System.out.println("SAVING AS ADMIN");
+        	userService.saveUserWithAdminRole(user);
+        	return "redirect:/admin";
+        }
+        else {
+        	System.out.println("ELSE STATEMENT");
+        	int counter = 0;
+        	for(int i = 0; i < users.size(); i++) {
+        		List<Role> roles = users.get(i).getRoles();
+        		System.out.println(roles);
+        		for(int j = 0; j < roles.size(); j++) {
+        			String theRole = (String) roles.get(j).getName();
+        			System.out.println(theRole);
+        			if (theRole.equals("ROLE_ADMIN")) {
+        				counter++;
+        			}
+        		}
+        	}
+        	if (counter > 0) {
+        		userService.saveWithUserRole(user);
+        		return "redirect:/login";
+        	}
+        	else {
+        		userService.saveUserWithAdminRole(user);
+            	return "redirect:/admin";
+        	}
+        }
+    }
+
+
+	@RequestMapping("/my311313")
+    public String login(@RequestParam(value="error", required=false) String error, @RequestParam(value="logout", required=false) String logout, Model model, @Valid @ModelAttribute("user") User user) {
+        if(error != null) {
+            model.addAttribute("errorMessage", "Invalid Credentials, Please try again.");
+        }
+        if(logout != null) {
+            model.addAttribute("logoutMessage", "Logout Successfull!");
+        }
+        return "loginPage.jsp";
+    }
+	
+    @RequestMapping("/")
+    public String home(@ModelAttribute("challengeTBA") ChallengesToBeAdded challengeTBA, BindingResult result) {
+        return "upforitapi.jsp";
+    }
+    
+    @PostMapping("/addChallenge")
+    public String addChallenge(@Valid @ModelAttribute("challengeTBA") ChallengesToBeAdded challengeTBA, BindingResult result, Principal principal) {
+    	if (result.hasErrors()) {
+    		return "redirect:/";
+    	}
+    	else {
+    		String username = principal.getName();
+    		User user = userService.findByUsername(username);
+    		List<Role> roles = user.getRoles();
+    		if (roles != null) {
+    			for(int i = 0; i < roles.size(); i++) {
+    				if (roles.get(i).equals("ROLE_ADMIN")) {
+    					System.out.println("SAVING AS REAL CHALLENGE");
+    					challengeService.saveTbaAsChallenge(challengeTBA);
+    					return "redirect:/";
+    				}
+    			}
+    		}
+    	}
+    	System.out.println("SAVING AS TBA");
+    	challengesTBAService.saveTBA(challengeTBA);
+		return "redirect:/";
+    }
+    
+    @RequestMapping("/myron")
+    public String adminPage(Principal principal, Model model) {
+        String username = principal.getName();
+        model.addAttribute("currentUser", userService.findByUsername(username));
+        model.addAttribute("users", userService.findAll());
+        return "adminPage.jsp";
+    }
+}

@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="WEB-INF/views/style.css" rel="stylesheet" type="text/css">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Welcome to the Great Number Game!</h2>
+	<p>I am thinking of a number between 1 and 100</p>
+	<p>Take a guess!</p>
+	<form action="NumberGame" method="Post">
+		<input type="text" name="guess">
+		<input type="Submit" value="Submit">
+	</form>
+	<% if (session.getAttribute("theGuess") != session.getAttribute("theNumber")){ %>
+		<div class = "red">
+			<p><%= session.getAttribute("guessResult") %></p>
+		</div>
+	<% } %>
+	<% if (session.getAttribute("theGuess") == session.getAttribute("theNumber")){ %>
+		<div class = "green">
+			<p><%= session.getAttribute("guessResult") %></p>
+			<form action="PlayAgain" method="Post">
+				<input type="Submit" value="Play Again!">
+			</form>
+		</div>
+	<% } %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+package codingDojo.zooKeeper;
+
+public class Dragon extends Mammal {
+	int energyLevel = 300;
+	
+	public Dragon() {
+		
+	}
+	
+	public void fly() {
+		energyLevel -= 50;
+		System.out.println("Dude you're a dragon and now you're flying. WeEeEeEeEeEeE MINUS 50 HEALTH THOUGH");		
+	}
+	
+	public void eatHumans() {
+		energyLevel += 25;
+		System.out.println("Eat Ritika. NoMbnOmNoMnOm taste gross. PLUS 25 HEALTH");
+	}
+	
+	public void attackTown() {
+		energyLevel -= 100;
+		System.out.println("Attack on Town. WOOHOO MINUS 100 HEALTH");
+	}
+
+}

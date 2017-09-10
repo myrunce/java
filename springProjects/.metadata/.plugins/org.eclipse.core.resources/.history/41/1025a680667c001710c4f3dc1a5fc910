@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Hi, I'm Myron</h1>
+		<h3>Welcome to my portfolio</h3>
+	</div>
+	<div id="about">
+		<h4><a href="/aboutMe">About me</a></h4>
+		<fieldset>
+			<p>This is my about me section</p>
+		</fieldset>
+	</div>
+	<div id="projects">
+		<h4><a href="/projects">About me</a></h4>
+		<fieldset>
+			<p>Showcasing my projects</p>
+		</fieldset>
+	</div>
+</body>
+</html>

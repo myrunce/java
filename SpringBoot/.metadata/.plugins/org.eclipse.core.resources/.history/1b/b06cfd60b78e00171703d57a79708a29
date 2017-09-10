@@ -1,0 +1,16 @@
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\UpForItApiApplication.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\repositories\ChallengesTBARepository.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\services\UserDetailsServiceImplementation.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\services\UserService.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\Config\WebSecurityConfig.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\controllers\UpForItApiController.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\models\Role.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\repositories\RoleRepository.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\models\ChallengesToBeAdded.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\repositories\UserRepository.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\services\ChallengeService.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\validator\UserValidator.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\repositories\ChallengeRepository.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\models\User.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\models\Challenge.java
+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\UpForItApi\src\main\java\com\myron\UpForItApi\services\ChallengesTBAService.java

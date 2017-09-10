@@ -1,0 +1,14 @@
+package com.myron.UpForIt.services;
+
+import org.springframework.stereotype.Service;
+
+import com.myron.UpForIt.repositories.CompletedRepo;
+
+@Service
+public class CompletedService {
+	private CompletedRepo completedRepo;
+	
+	public CompletedService(CompletedRepo completedRepo) {
+		this.completedRepo = completedRepo;
+	}
+}

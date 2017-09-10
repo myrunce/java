@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Menu>
+	<Breakfast>
+		<Eggs-and-ham Price="4.99" desc="food desc"></Eggs-and-ham>
+		<Pancakes Price="3.99" desc="food desc"></Pancakes></Breakfast>
+	<Dinner>
+		<Steak price="10.99" desc="food desc"></Steak>
+		<Chicken price="8.99" desc="food desc"></Chicken></Dinner></Menu>

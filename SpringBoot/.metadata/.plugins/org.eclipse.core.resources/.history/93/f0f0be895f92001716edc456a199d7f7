@@ -1,0 +1,6 @@
+package com.myron.UpForIt.models;
+
+@
+public class Completed {
+
+}

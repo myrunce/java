@@ -1,0 +1,17 @@
+package codingDojo.zooKeeper;
+
+public class ZooKeeperTest {
+
+	public static void main(String[] args) {
+		Gorilla bobby = new Gorilla();	
+	
+		bobby.throwSomething();
+		bobby.throwSomething();
+		bobby.throwSomething();
+		bobby.eatBananas();
+		bobby.eatBananas();
+		bobby.climb();
+		bobby.displayEnergy();
+	
+	}
+}

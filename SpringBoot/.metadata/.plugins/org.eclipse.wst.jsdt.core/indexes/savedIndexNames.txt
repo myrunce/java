@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+C:\Users\myron\Desktop\DojoAssignments\Java\SpringBoot\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1114183084.index
+3821296364.index
+644472486.index
+340132516.index
+1114660810.index
+4276188211.index
+2633019234.index
+2285127130.index
+3411209664.index
+532110977.index
+3119276404.index

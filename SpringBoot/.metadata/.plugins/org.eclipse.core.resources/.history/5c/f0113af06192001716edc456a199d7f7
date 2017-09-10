@@ -1,0 +1,14 @@
+package com.myron.UpForIt.services;
+
+import org.springframework.stereotype.Service;
+
+import com.myron.UpForIt.repositories.ChallengeRepo;
+
+@Service
+public class ChallengeService {
+	private ChallengeRepo challengeRepo;
+	
+	public ChallengeService(ChallengeRepo challengeRepo) {
+		this.challengeRepo = challengeRepo;
+	}
+}

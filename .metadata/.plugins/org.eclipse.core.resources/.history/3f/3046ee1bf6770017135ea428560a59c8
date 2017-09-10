@@ -1,0 +1,25 @@
+import java.util.Random;
+
+public class BankAccount {
+	private String accountNumber;
+	private long checkingBalance;
+	private long savingsBalance;
+	private static int numberOfMembers = 0;
+	private static long moneyStored = 0;
+	
+	private String tenDigitAccountNum() {
+		String accountNum = "";
+		for (var i = 0; i < 10; i++) {
+			Random r = new Random(10 - 0 + 1);
+			accountNum.concat(String.valueOf(r)); 
+		}
+		return accountNum;
+	}
+	
+	public BankAccount() {
+		this.accountNumber = tenDigitAccountNum();
+		numberOfMembers++;
+	}
+	
+	
+}

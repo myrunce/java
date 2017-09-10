@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Admin Page</title>
+</head>
+<body>
+	<h1>Current data in API:</h1>
+	<fieldset>
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Challenge</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${challenges}" var="c">
+					<tr>
+						<td>${c.id}</td>
+						<td>${c.theChallenge}</td>
+						<td><a href="/C31H331267T999INA/real/delete/${c.id}">Delete</a></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</fieldset>
+	<h1>Challenges to be added:</h1>
+	<fieldset>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Challenge</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${tbas}" var="tba">
+					<tr>
+						<td>${tba.id}</td>
+						<td>${tba.challenge}</td>
+						<td><a href="/C31H331267T999INA/add/${tba.id}">Add</a> | <a href="/C31H331267T999INA/delete/${tba.id}">Delete</a></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</fieldset>
+	<fieldset>
+		<h3>Add a challenge directly to API</h3>
+		<form:form method="POST" action="/C31H331267T999INA/addReal" modelAttribute="aChallenge">
+			<p>
+				<form:label path="theChallenge">Challenge:</form:label>
+				<form:input value="Post a new challenge here!" path="theChallenge" />
+			</p>
+			<input type="submit" value="Add A Challenge!" />
+		</form:form>
+	</fieldset>    
+    <form id="logoutForm" method="POST" action="/logout">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <input type="submit" value="Logout!" />
+    </form>
+</body>
+</html>

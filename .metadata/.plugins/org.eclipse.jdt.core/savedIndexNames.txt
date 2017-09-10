@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+C:\Users\myron\Desktop\DojoAssignments\Java\.metadata\.plugins\org.eclipse.jdt.core
+422488386.index
+1470517233.index
+2441938283.index
+3294775327.index

@@ -1,0 +1,5 @@
+package com.myron.Auth.validator;
+
+public class EventValidator {
+
+}

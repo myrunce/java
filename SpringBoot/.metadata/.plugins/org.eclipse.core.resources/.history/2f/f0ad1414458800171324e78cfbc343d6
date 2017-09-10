@@ -1,0 +1,5 @@
+package com.myron.UpForItApi.models;
+
+public class Challenge {
+
+}

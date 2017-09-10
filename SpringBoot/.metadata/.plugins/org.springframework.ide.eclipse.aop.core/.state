@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="UpForIt"/>
+<aop-project name="ProductCatalog"/>
+<aop-project name="Auth"/>
+<aop-project name="Events"/>
+<aop-project name="BrightIdeas"/>
+<aop-project name="UpForItApi"/>
+</aop-reference-model>

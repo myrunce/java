@@ -1,0 +1,10 @@
+package codingDojo.zooKeeper;
+
+public class Mammal {
+	int energyLevel = 100;
+	
+	public Integer displayEnergy() {
+		System.out.println(energyLevel);
+		return energyLevel;
+	}
+}

@@ -1,0 +1,5 @@
+package com.myron.Languages.models;
+
+public class Language {
+
+}

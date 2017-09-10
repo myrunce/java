@@ -1,0 +1,19 @@
+package com.myron.UpForItApi.services;
+
+import org.springframework.stereotype.Service;
+
+import com.myron.UpForItApi.models.ChallengesToBeAdded;
+import com.myron.UpForItApi.repositories.ChallengesTBARepository;
+
+@Service
+public class ChallengesTBAService {
+	private ChallengesTBARepository challengeTBARepo;
+	
+	public ChallengesTBAService(ChallengesTBARepository challengeTBARepo) {
+		this.challengeTBARepo = challengeTBARepo;
+	}
+	
+	public void saveTBA(ChallengesToBeAdded challengeTBA) {
+		
+	}
+}

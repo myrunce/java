@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+#red{
+	background-color: red;
+	height: 5mm;
+	width: 10mm;
+	display: inline-block;
+}
+#black{
+	background-color: black;
+	height: 5mm;
+	width: 10mm;
+	display: inline-block;
+	
+}

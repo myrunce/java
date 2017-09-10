@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <Menu>
+        		try {
+			String userName = request.getParameter("name");
+			String language = request.getParameter("language");
+			String hometown = request.getParameter("hometown");
+		}
+		catch(Exception e) {
+			String userName = "unknown";
+			String language = "unknown";
+			String hometown = "unknown";
+		}

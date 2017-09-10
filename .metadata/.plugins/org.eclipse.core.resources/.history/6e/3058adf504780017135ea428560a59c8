@@ -1,0 +1,12 @@
+
+public class Calculator {
+	private int op1;
+	private char op;
+	private int op2;
+	
+	public Calculator(int oper1, char oper, int oper2) {
+		this.op1 = oper1;
+		this.op = oper;
+		this.op2 = oper2;
+	}
+}

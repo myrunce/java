@@ -1,0 +1,29 @@
+package com.myron.UpForItApi.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+@Table(name = "challenges")
+public class Challenge {
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	@JsonProperty("challenge")
+	@Size(min=5, max=255)
+	private String challenge;
+	
+	public Challenge() {
+		
+	}
+	
+	public Challenge(String challenge) {
+		this.challenge = challenge;
+	}
+}

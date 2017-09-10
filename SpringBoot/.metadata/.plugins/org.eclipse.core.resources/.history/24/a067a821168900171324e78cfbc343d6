@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>UpforIt API</h1>
+	<fieldset>
+		<h4>Current data in API:</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Challenge</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${challenges}" var="challenge">
+					<tr>
+						<td>${challenge.getChallenge()}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</fieldset>
+	<fieldset>
+		<h2>How to use:</h2>
+		<p>UpForIt API is very simple to use and implement! all you need to do is make a request to "LINK HERE" and data will appear as JSON data like so: "EXAMPLE HERE". All data is sorted by number. To get a new challenge, change the ending number! For example: "EXAMPLE HERE" shows "EXAMPLE HERE". When ending number is changed like so: "EXAMPLE HERE" a new challenge is called! "EXAMPLE HERE".</p>
+	</fieldset>
+	<fieldset>
+		<h3>Add to the API!</h3>
+		<p>Anyone can add to the API by filling out the form below! Please note that all challenges posted will first be reviewed. Any challenge deemed inappropriate will not be added to the API. If the challenge is approved, that challenge will also added to the queue of challenges at UpForIt.com!</p>
+	</fieldset>
+	<fieldset>
+		<h3>Add a challenge here!</h3>
+		<form:form method="POST" action="/addChallenge" modelAttribute="challengeTBA">
+			<p>
+				<form:label path="challenge"></form:label>
+				<form:input value="Post a new challenge here!" path="challenge" />
+			</p>
+			<input type="submit" value="Add A Challenge!" />
+		</form:form>
+	</fieldset>
+</body>
+</html>

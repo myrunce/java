@@ -1,0 +1,14 @@
+package com.myron.Auth.validator;
+
+import javax.validation.Validator;
+
+import org.springframework.stereotype.Component;
+
+import com.myron.Auth.models.Event;
+import com.myron.Auth.models.User;
+
+
+@Component
+public class EventValidator implements Validator {
+	
+}
